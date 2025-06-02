@@ -40,11 +40,21 @@
 // QUESTION 4: Write a code to format number as currency (IDR)
 // (Tulis kode untuk memformat angka sebagai mata uang (IDR))
 
-const jumlah: number = 1000;
-const idrFormat: any = new Intl.NumberFormat("id-ID", {
-  style: "currency",
-  currency: "IDR",
-  maximumFractionDigits: 2,
-});
+// const jumlah: number = 1000;
+// const idrFormat: any = new Intl.NumberFormat("id-ID", {
+//   style: "currency",
+//   currency: "IDR",
+//   maximumFractionDigits: 2,
+// });
 
-console.log(idrFormat.format(jumlah));
+// console.log(idrFormat.format(jumlah));
+
+//////////////////////////////
+// QUESTION 5: Write a code to remove the first occurrence of a given “search string” from a string
+// (Tulis kode untuk menghapus kemunculan pertama dari “string pencarian” yang diberikan dari sebuah string)
+
+const str: string = "Hello World";
+const cari: string = "ell";
+const hasilStr: any = str.replace(cari, "");
+
+console.log(`string = "${str}", search string = "${cari}" -> "${hasilStr}"`);
