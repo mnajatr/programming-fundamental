@@ -32,6 +32,19 @@
 // QUESTION 3: Write a code to convert centimeter to kilometer.
 // (Tulis kode untuk mengubah sentimeter ke kilometer.)
 
-const cm: number = 500000;
+// const cm: number = 500000;
 
-console.log(`${cm} CM -> ${cm / 100000} KM`);
+// console.log(`${cm} CM -> ${cm / 100000} KM`);
+
+//////////////////////////////
+// QUESTION 4: Write a code to format number as currency (IDR)
+// (Tulis kode untuk memformat angka sebagai mata uang (IDR))
+
+const jumlah: number = 1000;
+const idrFormat: any = new Intl.NumberFormat("id-ID", {
+  style: "currency",
+  currency: "IDR",
+  maximumFractionDigits: 2,
+});
+
+console.log(idrFormat.format(jumlah));
