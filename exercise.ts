@@ -80,7 +80,34 @@
 // QUESTION 7: Write a code to find the largest of two given integers.
 // (Tulis kode untuk menemukan bilangan terbesar dari dua bilangan bulat yang diberikan)
 
-const num1: number = 42;
-const num2: number = 27;
+// const num1: number = 42;
+// const num2: number = 27;
 
-console.log(`num1 = ${num1} > num2 = ${num2} = ${num1 > num2 ? num1 : num2}`);
+// console.log(`num1 = ${num1} > num2 = ${num2} = ${num1 > num2 ? num1 : num2}`);
+
+//////////////////////////////
+// QUESTION 8: Write a conditional statement to sort three numbers.
+// (Tuliskan pernyataan kondisional untuk mengurutkan tiga angka)
+
+let num1: number = 42; // If per
+let num2: number = 27;
+let num3: number = 18;
+
+if (num1 > num2) {
+  let temp = num1;
+  num1 = num2;
+  num2 = temp;
+}
+
+if (num1 > num3) {
+  let temp = num1;
+  num1 = num3;
+  num3 = temp;
+}
+if (num2 > num3) {
+  let temp = num2;
+  num2 = num3;
+  num3 = temp;
+}
+
+console.log(`${num1}, ${num2}, ${num3}`);
