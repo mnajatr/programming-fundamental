@@ -115,16 +115,25 @@
 // QUESTION 9: Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.
 // (Tulis kode yang menunjukkan 1 jika inputnya berupa string, 2 jika inputnya berupa angka, dan 3 untuk tipe data lainnya.)
 
-const example: any = true;
+// const example: any = true;
 
-if (typeof example === "string") {
-  console.log("1");
-} else if (typeof example === "number") {
-  console.log("2");
-} else if (typeof example === "boolean") {
-  console.log("3");
-} else if (typeof example === "object") {
-  console.log("4");
-} else {
-  console.log("5");
-}
+// if (typeof example === "string") {
+//   console.log("1");
+// } else if (typeof example === "number") {
+//   console.log("2");
+// } else if (typeof example === "boolean") {
+//   console.log("3");
+// } else if (typeof example === "object") {
+//   console.log("4");
+// } else {
+//   console.log("5");
+// }
+
+//////////////////////////////
+// QUESTION 10: Write a code to change every letter a into * from a string of input.
+// (Tulis kode untuk mengubah setiap huruf a menjadi * dari string input.)
+
+const str: string = "An apple a day keeps the doctor away";
+const hasilStr: any = str.replace(/a/gi, "*");
+
+console.log(`${str} -> ${hasilStr}`);
