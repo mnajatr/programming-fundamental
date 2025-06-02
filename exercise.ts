@@ -15,7 +15,6 @@
 // (Tulis kode untuk memeriksa apakah suatu string adalah palindrom atau bukan.)
 
 // let str: string = "kodok";
-// let normalStr: string = str.toLowerCase();
 // let reverseStr: string = "";
 
 // for (let i = normalStr.length - 1; i >= 0; i--) {
@@ -89,25 +88,43 @@
 // QUESTION 8: Write a conditional statement to sort three numbers.
 // (Tuliskan pernyataan kondisional untuk mengurutkan tiga angka)
 
-let num1: number = 42; // If per
-let num2: number = 27;
-let num3: number = 18;
+// let num1: number = 42; // If per
+// let num2: number = 27;
+// let num3: number = 18;
 
-if (num1 > num2) {
-  let temp = num1;
-  num1 = num2;
-  num2 = temp;
-}
+// if (num1 > num2) {
+//   let temp = num1;
+//   num1 = num2;
+//   num2 = temp;
+// }
 
-if (num1 > num3) {
-  let temp = num1;
-  num1 = num3;
-  num3 = temp;
-}
-if (num2 > num3) {
-  let temp = num2;
-  num2 = num3;
-  num3 = temp;
-}
+// if (num1 > num3) {
+//   let temp = num1;
+//   num1 = num3;
+//   num3 = temp;
+// }
+// if (num2 > num3) {
+//   let temp = num2;
+//   num2 = num3;
+//   num3 = temp;
+// }
 
-console.log(`${num1}, ${num2}, ${num3}`);
+// console.log(`${num1}, ${num2}, ${num3}`);
+
+//////////////////////////////
+// QUESTION 9: Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.
+// (Tulis kode yang menunjukkan 1 jika inputnya berupa string, 2 jika inputnya berupa angka, dan 3 untuk tipe data lainnya.)
+
+const example: any = true;
+
+if (typeof example === "string") {
+  console.log("1");
+} else if (typeof example === "number") {
+  console.log("2");
+} else if (typeof example === "boolean") {
+  console.log("3");
+} else if (typeof example === "object") {
+  console.log("4");
+} else {
+  console.log("5");
+}
