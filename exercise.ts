@@ -63,15 +63,24 @@
 // QUESTION 6: Write a code to swap the case of each character from string
 // (Tulis kode untuk menukar huruf besar/kecil setiap karakter dari string)
 
-const str: any = "The QuiCk BrOwN Fox";
-let hasil: string = "";
-// console.log(str.charAt(4));
+// const str: any = "The QuiCk BrOwN Fox";
+// let hasil: string = "";
+// // console.log(str.charAt(4));
 
-for (let i = 0; i < str.length; i++) {
-  if (str.charAt(i) == str.charAt(i).toUpperCase()) {
-    hasil += str.charAt(i).toLowerCase();
-  } else {
-    hasil += str.charAt(i).toUpperCase();
-  }
-}
-console.log(hasil);
+// for (let i = 0; i < str.length; i++) {
+//   if (str.charAt(i) == str.charAt(i).toUpperCase()) {
+//     hasil += str.charAt(i).toLowerCase();
+//   } else {
+//     hasil += str.charAt(i).toUpperCase();
+//   }
+// }
+// console.log(hasil);
+
+//////////////////////////////
+// QUESTION 7: Write a code to find the largest of two given integers.
+// (Tulis kode untuk menemukan bilangan terbesar dari dua bilangan bulat yang diberikan)
+
+const num1: number = 42;
+const num2: number = 27;
+
+console.log(`num1 = ${num1} > num2 = ${num2} = ${num1 > num2 ? num1 : num2}`);
