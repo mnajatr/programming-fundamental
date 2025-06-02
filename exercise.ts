@@ -1,82 +1,68 @@
-/*
-//////////////////////////////////////////////
-// PROBLEM 1: Write a code to find area of rectangle.
-// (Tulis kode untuk mencari luas persegi panjang.)
+//////////////////////////////
+// QUESTION 1: Write a code to check whether the number is odd or even
+// (Tulis kode untuk memeriksa apakah angka tersebut ganjil atau genap)
 
-// TEST DATA : length = 5, width = 3
+// let num: number = 25;
+// if (num % 2 == 0) {
+//   console.log(`${num} even number`);
+// } else {
+//   console.log(`${num} odd number`);
+// }
 
-const panjang: number = 5;
-const lebar: number = 3;
-const luas: number = panjang * lebar;
+//////////////////////////////
+// QUESTION 2: Write a code to check whether the number is prime number or not
+// (Tulis kode untuk memeriksa apakah bilangan tersebut bilangan prima atau bukan)
+let n: number = 7;
+let d: number = 0;
 
-console.log(luas);
-//////////////////////////////////////////////
-// PROBLEM 2: Write a code to find perimeter of rectangle.
-// (Tulis kode untuk mencari keliling persegi panjang.)
+for (let i = 1; i <= n; i++) {
+  if (n % i == 0) d++;
+}
 
-// TEST DATA : length = 5, width = 3
+if (d == 2) {
+  console.log(`${n} is a prime number`);
+} else {
+  console.log(`${n} is not a prime number`);
+}
 
-const panjang: number = 5;
-const lebar: number = 3;
+//////////////////////////////
+// QUESTION 3: Write a code to find the sum of the numbers 1 to N
+// (Tulis kode untuk menemukan jumlah angka 1 sampai N)
 
-const keliling: number = 2 * (panjang + lebar);
+// const n: number = 5;
+// let sum: number = 0;
 
-console.log(keliling);
+// for (let i = 1; i <= n; i++) {
+//   sum += i;
+// }
 
-//////////////////////////////////////////////
-// PROBLEM 3: Write a code to find diameter, circumference and area of a circle.
-// (Tulis kode untuk mencari diameter, keliling dan luas lingkaran.)
+// console.log(sum);
 
-// TEST DATA: radius = 5
+//////////////////////////////
+// QUESTION 4: Write a code to find factorial of a number
+// (Tulis kode untuk mencari faktorial suatu bilangan)
 
-const radius: number = 5;
+// const n: number = 4;
+// let sum: number = 1;
 
-const d: number = 2 * radius;
-const k: number = 2 * 3.14 * radius;
-const l: number = 3.14 * radius * radius;
+// for (let i = n; i >= 1; i--) {
+//   sum *= i;
+// }
 
-console.log(d, k, l);
+// console.log(sum);
 
-//////////////////////////////////////////////
-// PROBLEM 4: Write a code to find diameter, circumference and area of a circle.
-// (Tulis kode untuk menemukan sudut segitiga jika dua sudut diberikan.)
+//////////////////////////////
+// QUESTION 5: Write a code to print the first N fibonacci numbers
+// (Tulis kode untuk mencetak N angka fibonacci pertama)
 
-// TEST DATA:  a = 80, b = 65
+// let n: number = 15;
+// let a: number = 0;
+// let b: number = 1;
 
-const a: number = 80;
-const b: number = 65;
+// for (let i = 1; i < n; i++) {
+//   let next: number = a + b;
+//   a = b;
+//   b = next;
+// }
 
-const total = 180 - (a + b);
-
-console.log(total);
-
-//////////////////////////////////////////////
-// PROBLEM 4: Write a code to convert days to years, months and days (Notes: 1 year : 365 days, 1 month : 30 days).
-// (Tulis kode untuk mengubah hari menjadi tahun, bulan, dan hari (Catatan: 1 tahun: 365 hari, 1 bulan: 30 hari).)
-
-const totalHari: number = 400;
-const sisaHari: number = totalHari % 365; // 35
-
-const year = totalHari / 365;
-const month = sisaHari / 30;
-const day = sisaHari % 30;
-
-console.log(
-  `${totalHari} Days -> ${year.toFixed()} year, ${month.toFixed()} month, ${day.toFixed()} days`
-);
-
-//////////////////////////////////////////////
-// PROBLEM 5: Write a code to get difference between dates in days.
-// (Tulis kode untuk mendapatkan perbedaan antara tanggal dalam hari.)
-
-const dateStr1: string = "2022-01-20";
-const dateStr2: string = "2022-01-22";
-
-const date1: Date = new Date(dateStr1);
-const date2: Date = new Date(dateStr2);
-
-const date = date2.getTime() - date1.getTime();
-const ms = 1000 * 60 * 60 * 24;
-
-console.log(date / ms);
-*/
+// console.log(b);
