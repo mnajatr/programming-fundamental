@@ -53,8 +53,25 @@
 // QUESTION 5: Write a code to remove the first occurrence of a given “search string” from a string
 // (Tulis kode untuk menghapus kemunculan pertama dari “string pencarian” yang diberikan dari sebuah string)
 
-const str: string = "Hello World";
-const cari: string = "ell";
-const hasilStr: any = str.replace(cari, "");
+// const str: string = "Hello World";
+// const cari: string = "ell";
+// const hasilStr: any = str.replace(cari, "");
 
-console.log(`string = "${str}", search string = "${cari}" -> "${hasilStr}"`);
+// console.log(`string = "${str}", search string = "${cari}" -> "${hasilStr}"`);
+
+//////////////////////////////
+// QUESTION 6: Write a code to swap the case of each character from string
+// (Tulis kode untuk menukar huruf besar/kecil setiap karakter dari string)
+
+const str: any = "The QuiCk BrOwN Fox";
+let hasil: string = "";
+// console.log(str.charAt(4));
+
+for (let i = 0; i < str.length; i++) {
+  if (str.charAt(i) == str.charAt(i).toUpperCase()) {
+    hasil += str.charAt(i).toLowerCase();
+  } else {
+    hasil += str.charAt(i).toUpperCase();
+  }
+}
+console.log(hasil);
