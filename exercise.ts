@@ -1,139 +1,99 @@
-//////////////////////////////
-// QUESTION 1: Write a code to display the multiplication table of a given integer.
-// (Tulis kode untuk menampilkan tabel perkalian bilangan bulat yang diberikan.)
+//////////////////////////////////////////////
+// EXERCISE 1: Create a function that can create a triangle pattern according to the height we provide like the following:
+// 01
+// 02 03
+// 04 05 06
+// 07 08 09 10
+// Parameters : height → triangle height
 
-// let input: number = 9;
-// const limit: number = 10;
+const triangle = function (height: number) {
+  for (let i = 1; i <= height; i++) {
+    let temp = "";
+    for (let j = 1; j <= i; j++) {
+      temp += j;
+    }
+    console.log(temp);
+  }
+};
+triangle(5);
 
-// console.log(`Tabel perkalian untuk: ${input}`);
-// for (let i: number = 1; i <= limit; i++) {
-//   console.log(`${input} x ${i}: ${input * i}`);
-// }
+//////////////////////////////////////////////
+// EXERCISE 2: Create a function that can loop the number of times according to the input we provide, and will replace multiples of 3 with "Fizz", multiples of 5 with "Buzz", multiples of 3 and 5 with "FizzBuzz".
+// Parameters: n → total looping
+// - Example: n = 6 → 1, 2, Fizz, 4, Buzz, Fizz
+// - Example: n = 15 → 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 12, 13, 14, FizzBuzz
 
-//////////////////////////////
-// QUESTION 2: Write a code to check whether a string is a palindrome or not.
-// (Tulis kode untuk memeriksa apakah suatu string adalah palindrom atau bukan.)
+const fizzBuzz = function (n: number) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 == 0) {
+      console.log("Fizz");
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+};
 
-// let str: string = "kodok";
-// let reverseStr: string = "";
+fizzBuzz(6);
 
-// for (let i = normalStr.length - 1; i >= 0; i--) {
-//   reverseStr += normalStr[i];
-// }
+//////////////////////////////////////////////
+// EXERCISE 3: - Create a function to calculate Body Mass Index (BMI)
+// - Formula : BMI = weight (kg) / (height (meter))²
+// - Parameters : weight & height
+// - Return values :
+// - < 18.5 return “less weight”
+// - 18.5 - 24.9 return “ideal”
+// - 25.0 - 29.9 return “overweight”
+// - 30.0 - 39.9 return “very overweight”
+// - > 39.9 return “obesity”z
 
-// if (normalStr === reverseStr) {
-//   console.log(`${str} adalah palindrom`);
-// } else {
-//   console.log(`${str} bukan palindrom`);
-// }
+const calcBmi = function (weight: number, height: number) {
+  let bmi = weight / height ** 2;
+  // let bmi = weight / (height * height);
+  if (bmi < 18.5) {
+    return "less weight";
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    return "ideal";
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    return "overweight";
+  } else if (bmi >= 30 && bmi <= 39.9) {
+    return "very overweight";
+  } else {
+    return "obesity'z";
+  }
+};
 
-//////////////////////////////
-// QUESTION 3: Write a code to convert centimeter to kilometer.
-// (Tulis kode untuk mengubah sentimeter ke kilometer.)
+const naja = calcBmi(70, 1.7);
+console.log(naja);
 
-// const cm: number = 500000;
+//////////////////////////////////////////////
+// EXERCISE 4: Write a function to remove all odd numbers in an array and return a new array that contains even numbers only
+// - Example : [1,2,3,4,5,6,7,8,9,10] → [2,4,6,8,10]
 
-// console.log(`${cm} CM -> ${cm / 100000} KM`);
+const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers);
 
-//////////////////////////////
-// QUESTION 4: Write a code to format number as currency (IDR)
-// (Tulis kode untuk memformat angka sebagai mata uang (IDR))
+const odd = function () {
+  let results = [];
+  for (let i: number = 1; i <= numbers.length; i++) {
+    if (i % 2 === 0) {
+      results.push(i);
+    }
+  }
+  return results;
+};
 
-// const jumlah: number = 1000;
-// const idrFormat: any = new Intl.NumberFormat("id-ID", {
-//   style: "currency",
-//   currency: "IDR",
-//   maximumFractionDigits: 2,
-// });
+console.log(odd());
 
-// console.log(idrFormat.format(jumlah));
+//////////////////////////////////////////////
+// EXERCISE 5: Write a function to split a string and convert it into an array of words
+// - Example : “Hello World” → [“Hello”, “World”]
 
-//////////////////////////////
-// QUESTION 5: Write a code to remove the first occurrence of a given “search string” from a string
-// (Tulis kode untuk menghapus kemunculan pertama dari “string pencarian” yang diberikan dari sebuah string)
+const splitString = function (str: string) {
+  return str.split(" ");
+};
 
-// const str: string = "Hello World";
-// const cari: string = "ell";
-// const hasilStr: any = str.replace(cari, "");
-
-// console.log(`string = "${str}", search string = "${cari}" -> "${hasilStr}"`);
-
-//////////////////////////////
-// QUESTION 6: Write a code to swap the case of each character from string
-// (Tulis kode untuk menukar huruf besar/kecil setiap karakter dari string)
-
-// const str: any = "The QuiCk BrOwN Fox";
-// let hasil: string = "";
-// // console.log(str.charAt(4));
-
-// for (let i = 0; i < str.length; i++) {
-//   if (str.charAt(i) == str.charAt(i).toUpperCase()) {
-//     hasil += str.charAt(i).toLowerCase();
-//   } else {
-//     hasil += str.charAt(i).toUpperCase();
-//   }
-// }
-// console.log(hasil);
-
-//////////////////////////////
-// QUESTION 7: Write a code to find the largest of two given integers.
-// (Tulis kode untuk menemukan bilangan terbesar dari dua bilangan bulat yang diberikan)
-
-// const num1: number = 42;
-// const num2: number = 27;
-
-// console.log(`num1 = ${num1} > num2 = ${num2} = ${num1 > num2 ? num1 : num2}`);
-
-//////////////////////////////
-// QUESTION 8: Write a conditional statement to sort three numbers.
-// (Tuliskan pernyataan kondisional untuk mengurutkan tiga angka)
-
-// let num1: number = 42; // If per
-// let num2: number = 27;
-// let num3: number = 18;
-
-// if (num1 > num2) {
-//   let temp = num1;
-//   num1 = num2;
-//   num2 = temp;
-// }
-
-// if (num1 > num3) {
-//   let temp = num1;
-//   num1 = num3;
-//   num3 = temp;
-// }
-// if (num2 > num3) {
-//   let temp = num2;
-//   num2 = num3;
-//   num3 = temp;
-// }
-
-// console.log(`${num1}, ${num2}, ${num3}`);
-
-//////////////////////////////
-// QUESTION 9: Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.
-// (Tulis kode yang menunjukkan 1 jika inputnya berupa string, 2 jika inputnya berupa angka, dan 3 untuk tipe data lainnya.)
-
-// const example: any = true;
-
-// if (typeof example === "string") {
-//   console.log("1");
-// } else if (typeof example === "number") {
-//   console.log("2");
-// } else if (typeof example === "boolean") {
-//   console.log("3");
-// } else if (typeof example === "object") {
-//   console.log("4");
-// } else {
-//   console.log("5");
-// }
-
-//////////////////////////////
-// QUESTION 10: Write a code to change every letter a into * from a string of input.
-// (Tulis kode untuk mengubah setiap huruf a menjadi * dari string input.)
-
-const str: string = "An apple a day keeps the doctor away";
-const hasilStr: any = str.replace(/a/gi, "*");
-
-console.log(`${str} -> ${hasilStr}`);
+console.log(splitString("Hello World"));
