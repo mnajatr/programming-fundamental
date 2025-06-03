@@ -1,82 +1,99 @@
-/*
 //////////////////////////////////////////////
-// PROBLEM 1: Write a code to find area of rectangle.
-// (Tulis kode untuk mencari luas persegi panjang.)
+// EXERCISE 1: Create a function that can create a triangle pattern according to the height we provide like the following:
+// 01
+// 02 03
+// 04 05 06
+// 07 08 09 10
+// Parameters : height → triangle height
 
-// TEST DATA : length = 5, width = 3
-
-const panjang: number = 5;
-const lebar: number = 3;
-const luas: number = panjang * lebar;
-
-console.log(luas);
-//////////////////////////////////////////////
-// PROBLEM 2: Write a code to find perimeter of rectangle.
-// (Tulis kode untuk mencari keliling persegi panjang.)
-
-// TEST DATA : length = 5, width = 3
-
-const panjang: number = 5;
-const lebar: number = 3;
-
-const keliling: number = 2 * (panjang + lebar);
-
-console.log(keliling);
+const triangle = function (height: number) {
+  for (let i = 1; i <= height; i++) {
+    let temp = "";
+    for (let j = 1; j <= i; j++) {
+      temp += j;
+    }
+    console.log(temp);
+  }
+};
+triangle(5);
 
 //////////////////////////////////////////////
-// PROBLEM 3: Write a code to find diameter, circumference and area of a circle.
-// (Tulis kode untuk mencari diameter, keliling dan luas lingkaran.)
+// EXERCISE 2: Create a function that can loop the number of times according to the input we provide, and will replace multiples of 3 with "Fizz", multiples of 5 with "Buzz", multiples of 3 and 5 with "FizzBuzz".
+// Parameters: n → total looping
+// - Example: n = 6 → 1, 2, Fizz, 4, Buzz, Fizz
+// - Example: n = 15 → 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 12, 13, 14, FizzBuzz
 
-// TEST DATA: radius = 5
+const fizzBuzz = function (n: number) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 == 0) {
+      console.log("Fizz");
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+};
 
-const radius: number = 5;
-
-const d: number = 2 * radius;
-const k: number = 2 * 3.14 * radius;
-const l: number = 3.14 * radius * radius;
-
-console.log(d, k, l);
-
-//////////////////////////////////////////////
-// PROBLEM 4: Write a code to find diameter, circumference and area of a circle.
-// (Tulis kode untuk menemukan sudut segitiga jika dua sudut diberikan.)
-
-// TEST DATA:  a = 80, b = 65
-
-const a: number = 80;
-const b: number = 65;
-
-const total = 180 - (a + b);
-
-console.log(total);
+fizzBuzz(6);
 
 //////////////////////////////////////////////
-// PROBLEM 4: Write a code to convert days to years, months and days (Notes: 1 year : 365 days, 1 month : 30 days).
-// (Tulis kode untuk mengubah hari menjadi tahun, bulan, dan hari (Catatan: 1 tahun: 365 hari, 1 bulan: 30 hari).)
+// EXERCISE 3: - Create a function to calculate Body Mass Index (BMI)
+// - Formula : BMI = weight (kg) / (height (meter))²
+// - Parameters : weight & height
+// - Return values :
+// - < 18.5 return “less weight”
+// - 18.5 - 24.9 return “ideal”
+// - 25.0 - 29.9 return “overweight”
+// - 30.0 - 39.9 return “very overweight”
+// - > 39.9 return “obesity”z
 
-const totalHari: number = 400;
-const sisaHari: number = totalHari % 365; // 35
+const calcBmi = function (weight: number, height: number) {
+  let bmi = weight / height ** 2;
+  // let bmi = weight / (height * height);
+  if (bmi < 18.5) {
+    return "less weight";
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    return "ideal";
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    return "overweight";
+  } else if (bmi >= 30 && bmi <= 39.9) {
+    return "very overweight";
+  } else {
+    return "obesity'z";
+  }
+};
 
-const year = totalHari / 365;
-const month = sisaHari / 30;
-const day = sisaHari % 30;
-
-console.log(
-  `${totalHari} Days -> ${year.toFixed()} year, ${month.toFixed()} month, ${day.toFixed()} days`
-);
+const naja = calcBmi(70, 1.7);
+console.log(naja);
 
 //////////////////////////////////////////////
-// PROBLEM 5: Write a code to get difference between dates in days.
-// (Tulis kode untuk mendapatkan perbedaan antara tanggal dalam hari.)
+// EXERCISE 4: Write a function to remove all odd numbers in an array and return a new array that contains even numbers only
+// - Example : [1,2,3,4,5,6,7,8,9,10] → [2,4,6,8,10]
 
-const dateStr1: string = "2022-01-20";
-const dateStr2: string = "2022-01-22";
+const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers);
 
-const date1: Date = new Date(dateStr1);
-const date2: Date = new Date(dateStr2);
+const odd = function () {
+  let results = [];
+  for (let i: number = 1; i <= numbers.length; i++) {
+    if (i % 2 === 0) {
+      results.push(i);
+    }
+  }
+  return results;
+};
 
-const date = date2.getTime() - date1.getTime();
-const ms = 1000 * 60 * 60 * 24;
+console.log(odd());
 
-console.log(date / ms);
-*/
+//////////////////////////////////////////////
+// EXERCISE 5: Write a function to split a string and convert it into an array of words
+// - Example : “Hello World” → [“Hello”, “World”]
+
+const splitString = function (str: string) {
+  return str.split(" ");
+};
+
+console.log(splitString("Hello World"));
