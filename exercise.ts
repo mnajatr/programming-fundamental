@@ -1,82 +1,139 @@
-/*
-//////////////////////////////////////////////
-// PROBLEM 1: Write a code to find area of rectangle.
-// (Tulis kode untuk mencari luas persegi panjang.)
+//////////////////////////////
+// QUESTION 1: Write a code to display the multiplication table of a given integer.
+// (Tulis kode untuk menampilkan tabel perkalian bilangan bulat yang diberikan.)
 
-// TEST DATA : length = 5, width = 3
+// let input: number = 9;
+// const limit: number = 10;
 
-const panjang: number = 5;
-const lebar: number = 3;
-const luas: number = panjang * lebar;
+// console.log(`Tabel perkalian untuk: ${input}`);
+// for (let i: number = 1; i <= limit; i++) {
+//   console.log(`${input} x ${i}: ${input * i}`);
+// }
 
-console.log(luas);
-//////////////////////////////////////////////
-// PROBLEM 2: Write a code to find perimeter of rectangle.
-// (Tulis kode untuk mencari keliling persegi panjang.)
+//////////////////////////////
+// QUESTION 2: Write a code to check whether a string is a palindrome or not.
+// (Tulis kode untuk memeriksa apakah suatu string adalah palindrom atau bukan.)
 
-// TEST DATA : length = 5, width = 3
+// let str: string = "kodok";
+// let reverseStr: string = "";
 
-const panjang: number = 5;
-const lebar: number = 3;
+// for (let i = normalStr.length - 1; i >= 0; i--) {
+//   reverseStr += normalStr[i];
+// }
 
-const keliling: number = 2 * (panjang + lebar);
+// if (normalStr === reverseStr) {
+//   console.log(`${str} adalah palindrom`);
+// } else {
+//   console.log(`${str} bukan palindrom`);
+// }
 
-console.log(keliling);
+//////////////////////////////
+// QUESTION 3: Write a code to convert centimeter to kilometer.
+// (Tulis kode untuk mengubah sentimeter ke kilometer.)
 
-//////////////////////////////////////////////
-// PROBLEM 3: Write a code to find diameter, circumference and area of a circle.
-// (Tulis kode untuk mencari diameter, keliling dan luas lingkaran.)
+// const cm: number = 500000;
 
-// TEST DATA: radius = 5
+// console.log(`${cm} CM -> ${cm / 100000} KM`);
 
-const radius: number = 5;
+//////////////////////////////
+// QUESTION 4: Write a code to format number as currency (IDR)
+// (Tulis kode untuk memformat angka sebagai mata uang (IDR))
 
-const d: number = 2 * radius;
-const k: number = 2 * 3.14 * radius;
-const l: number = 3.14 * radius * radius;
+// const jumlah: number = 1000;
+// const idrFormat: any = new Intl.NumberFormat("id-ID", {
+//   style: "currency",
+//   currency: "IDR",
+//   maximumFractionDigits: 2,
+// });
 
-console.log(d, k, l);
+// console.log(idrFormat.format(jumlah));
 
-//////////////////////////////////////////////
-// PROBLEM 4: Write a code to find diameter, circumference and area of a circle.
-// (Tulis kode untuk menemukan sudut segitiga jika dua sudut diberikan.)
+//////////////////////////////
+// QUESTION 5: Write a code to remove the first occurrence of a given “search string” from a string
+// (Tulis kode untuk menghapus kemunculan pertama dari “string pencarian” yang diberikan dari sebuah string)
 
-// TEST DATA:  a = 80, b = 65
+// const str: string = "Hello World";
+// const cari: string = "ell";
+// const hasilStr: any = str.replace(cari, "");
 
-const a: number = 80;
-const b: number = 65;
+// console.log(`string = "${str}", search string = "${cari}" -> "${hasilStr}"`);
 
-const total = 180 - (a + b);
+//////////////////////////////
+// QUESTION 6: Write a code to swap the case of each character from string
+// (Tulis kode untuk menukar huruf besar/kecil setiap karakter dari string)
 
-console.log(total);
+// const str: any = "The QuiCk BrOwN Fox";
+// let hasil: string = "";
+// // console.log(str.charAt(4));
 
-//////////////////////////////////////////////
-// PROBLEM 4: Write a code to convert days to years, months and days (Notes: 1 year : 365 days, 1 month : 30 days).
-// (Tulis kode untuk mengubah hari menjadi tahun, bulan, dan hari (Catatan: 1 tahun: 365 hari, 1 bulan: 30 hari).)
+// for (let i = 0; i < str.length; i++) {
+//   if (str.charAt(i) == str.charAt(i).toUpperCase()) {
+//     hasil += str.charAt(i).toLowerCase();
+//   } else {
+//     hasil += str.charAt(i).toUpperCase();
+//   }
+// }
+// console.log(hasil);
 
-const totalHari: number = 400;
-const sisaHari: number = totalHari % 365; // 35
+//////////////////////////////
+// QUESTION 7: Write a code to find the largest of two given integers.
+// (Tulis kode untuk menemukan bilangan terbesar dari dua bilangan bulat yang diberikan)
 
-const year = totalHari / 365;
-const month = sisaHari / 30;
-const day = sisaHari % 30;
+// const num1: number = 42;
+// const num2: number = 27;
 
-console.log(
-  `${totalHari} Days -> ${year.toFixed()} year, ${month.toFixed()} month, ${day.toFixed()} days`
-);
+// console.log(`num1 = ${num1} > num2 = ${num2} = ${num1 > num2 ? num1 : num2}`);
 
-//////////////////////////////////////////////
-// PROBLEM 5: Write a code to get difference between dates in days.
-// (Tulis kode untuk mendapatkan perbedaan antara tanggal dalam hari.)
+//////////////////////////////
+// QUESTION 8: Write a conditional statement to sort three numbers.
+// (Tuliskan pernyataan kondisional untuk mengurutkan tiga angka)
 
-const dateStr1: string = "2022-01-20";
-const dateStr2: string = "2022-01-22";
+// let num1: number = 42; // If per
+// let num2: number = 27;
+// let num3: number = 18;
 
-const date1: Date = new Date(dateStr1);
-const date2: Date = new Date(dateStr2);
+// if (num1 > num2) {
+//   let temp = num1;
+//   num1 = num2;
+//   num2 = temp;
+// }
 
-const date = date2.getTime() - date1.getTime();
-const ms = 1000 * 60 * 60 * 24;
+// if (num1 > num3) {
+//   let temp = num1;
+//   num1 = num3;
+//   num3 = temp;
+// }
+// if (num2 > num3) {
+//   let temp = num2;
+//   num2 = num3;
+//   num3 = temp;
+// }
 
-console.log(date / ms);
-*/
+// console.log(`${num1}, ${num2}, ${num3}`);
+
+//////////////////////////////
+// QUESTION 9: Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.
+// (Tulis kode yang menunjukkan 1 jika inputnya berupa string, 2 jika inputnya berupa angka, dan 3 untuk tipe data lainnya.)
+
+// const example: any = true;
+
+// if (typeof example === "string") {
+//   console.log("1");
+// } else if (typeof example === "number") {
+//   console.log("2");
+// } else if (typeof example === "boolean") {
+//   console.log("3");
+// } else if (typeof example === "object") {
+//   console.log("4");
+// } else {
+//   console.log("5");
+// }
+
+//////////////////////////////
+// QUESTION 10: Write a code to change every letter a into * from a string of input.
+// (Tulis kode untuk mengubah setiap huruf a menjadi * dari string input.)
+
+const str: string = "An apple a day keeps the doctor away";
+const hasilStr: any = str.replace(/a/gi, "*");
+
+console.log(`${str} -> ${hasilStr}`);
